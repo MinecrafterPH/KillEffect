@@ -1,0 +1,9 @@
+name: KillForMoney
+main: main\moneyforkill
+version: 1.0
+api: 1.4.0
+load: STARTUP
+author: MinecrafterPH
+authors: [MinecrafterPH]
+description: Get money for killing someone.
+website: http://www.minecrafterph.tk
