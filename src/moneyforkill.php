@@ -45,8 +45,8 @@ use pocketmine\event\entity\EntityDamageEvent;
 					
 					if($damager instanceof Player)
 					{
-						$damager->sendMessage("You earn $50 for getting a kill.");
-						$player->sendMessage("You lose $20 for getting killed.");
+						$damager->sendMessage("You killed $player.\nYou earn $50 for getting a kill.");
+						$player->sendMessage("You were killed by $damager.\nYou lose $20 for getting killed.");
 						$this->api->addMoney($damager, 50);
 						$this->api->reduceMoney($player, 20);
 					}
