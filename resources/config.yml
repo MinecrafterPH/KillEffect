@@ -1,0 +1,35 @@
+# KillEffect by MinecrafterPH
+
+#Effect ID's
+
+#SPEED = 1
+#SLOWNESS = 2
+#HASTE = 3
+#SWIFTNESS = 3
+#FATIGUE = 4
+#MINING_FATIGUE = 4
+#STRENGTH = 5
+#JUMP = 8
+#NAUSEA = 9
+#CONFUSION = 9
+#REGENERATION = 10
+#DAMAGE_RESISTANCE = 11
+#FIRE_RESISTANCE = 12
+#WATER_BREATHING = 13
+#INVISIBILITY = 14
+#WEAKNESS = 18
+#POISON = 19
+#WITHER = 20
+#HEALTH_BOOST = 2
+
+#Effect-ID: ID of the effect
+#Duration in ticks: 1200 = 1 Minute | 20 = 1 second
+#Amplifier: Power of the effect
+#Particles: Show particles of the effect (true / false)
+
+Effect-ID: "1"
+Duration: "2400"
+Amplifier: "0"
+Particles: true
+Add-Money: 50
+Reduce-Money: 20
