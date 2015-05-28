@@ -31,6 +31,9 @@ use pocketmine\event\entity\EntityDamageEvent;
 			$this->getServer()->getPluginManager()->registerEvents($this,$this);
 			$this->getLogger()->info("KillEffect has been enabled.");
 			$this->api = EconomyAPI::getInstance();
+			if (!$this->api) {
+			$this->getLogger()->info(TextFormat::RED."Unable to find EconomyAPI.");
+			return;
 		}
 	
 		public function onPlayerDeathEvent(PlayerDeathEvent $event)
