@@ -64,10 +64,10 @@ use pocketmine\event\entity\EntityDamageEvent;
 					{
 						$damager->sendMessage("You killed $player.\nYou earn $$add for getting a kill and a health boost for $duration seconds.");
 						$damager->addEffect($effect);
-						$this->api->setMoney($damager, $add);
+						$this->api->addMoney($damager, $add);
 						
 						$player->sendMessage("You were killed by $damager.\nYou lose $$reduce for getting killed.");
-						$this->api->takeMoney($player, $reduce);
+						$this->api->reduceMoney($player, $reduce);
 					}
 				}
 			}
