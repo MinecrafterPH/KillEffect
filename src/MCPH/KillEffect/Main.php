@@ -36,7 +36,6 @@ use pocketmine\event\entity\EntityDamageEvent;
 		public function onPlayerDeathEvent(PlayerDeathEvent $event)
 		{
 			$cfg = $this->getConfig();
-			$effectid = $cfg->get("Effect-ID");
 			$duration = $cfg->get("Duration");
 			$particles = $cfg->get("Particles");
 			$amplifier = $cfg->get("Amplifier");
@@ -44,7 +43,7 @@ use pocketmine\event\entity\EntityDamageEvent;
 			$give = $cfg->get("Add-Money")
 			$take = $cfg->get("Reduce-Money")
 			
-			$effect = Effect::getEffect($effectid); //Effect ID
+			$effect = Effect::getEffect("21"); //Effect ID
 	                $effect->setVisible($particles); //Particles
 	                $effect->setAmplifier($amplifier);
 	                $effect->setDuration($duration); //Ticks
