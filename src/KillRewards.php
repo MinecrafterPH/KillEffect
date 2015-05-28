@@ -1,7 +1,7 @@
 <?php
 
 
-namespace KillRewards;
+namespace MCPH\KillEffect\Main;
 
 
 use pocketmine\utils\TextFormat as MT;
@@ -21,7 +21,7 @@ use onebone\economyapi\EconomyAPI;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDamageEvent;
 
-	class KillRewards extends PluginBase implements Listener
+	class KillEffect extends PluginBase implements Listener
 	
 	{
 		public function onEnable()
@@ -29,7 +29,7 @@ use pocketmine\event\entity\EntityDamageEvent;
 		        $this->saveDefaultConfig();
 		        $this->reloadConfig();	
 			$this->getServer()->getPluginManager()->registerEvents($this,$this);
-			$this->getLogger()->info("KillRewards has been enabled.");
+			$this->getLogger()->info("KillEffect has been enabled.");
 			$this->api = EconomyAPI::getInstance();
 		}
 	
@@ -42,7 +42,7 @@ use pocketmine\event\entity\EntityDamageEvent;
 			$amplifier = $cfg->get("Amplifier");
 			
 			$add = $cfg->get("Add-Money")
-			$reduce = $cfg->get("Remove-Money")
+			$reduce = $cfg->get("Reduce-Money")
 			
 			$effect = Effect::getEffect($effectid); //Effect ID
 	                $effect->setVisible($particles); //Particles
