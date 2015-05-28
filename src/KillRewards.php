@@ -1,7 +1,7 @@
 <?php
 
 
-namespace moneyforkill;
+namespace KillRewards;
 
 
 use pocketmine\utils\TextFormat as MT;
@@ -21,17 +21,34 @@ use onebone\economyapi\EconomyAPI;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDamageEvent;
 
-	class moneyforkill extends PluginBase implements Listener
+	class KillRewards extends PluginBase implements Listener
 	
 	{
 		public function onEnable()
 		{
+		        $this->saveDefaultConfig();
+		        $this->reloadConfig();	
 			$this->getServer()->getPluginManager()->registerEvents($this,$this);
+			$this->getLogger()->info("KillRewards has been enabled.");
 			$this->api = EconomyAPI::getInstance();
 		}
 	
 		public function onPlayerDeathEvent(PlayerDeathEvent $event)
 		{
+			$cfg = $this->getConfig();
+			$effectid = $cfg->get("Effect-ID");
+			$duration = $cfg->get("Duration");
+			$particles = $cfg->get("Particles");
+			$amplifier = $cfg->get("Amplifier");
+			
+			$add = $cfg->get("Add-Money")
+			$reduce = $cfg->get("Remove-Money")
+			
+			$effect = Effect::getEffect($effectid); //Effect ID
+	                $effect->setVisible($particles); //Particles
+	                $effect->setAmplifier($amplifier);
+	                $effect->setDuration($duration); //Ticks
+			
 			$player = $event->getEntity();
 			$name = strtolower($player->getName());
 		
@@ -45,10 +62,12 @@ use pocketmine\event\entity\EntityDamageEvent;
 					
 					if($damager instanceof Player)
 					{
-						$damager->sendMessage("You killed $player.\nYou earn $50 for getting a kill.");
-						$player->sendMessage("You were killed by $damager.\nYou lose $20 for getting killed.");
-						$this->api->addMoney($damager, 50);
-						$this->api->reduceMoney($player, 20);
+						$damager->sendMessage("You killed $player.\nYou earn $$add for getting a kill and a health boost for $duration seconds.");
+						$damager->addEffect($effect);
+						$this->api->addMoney($damager, $add);
+						
+						$player->sendMessage("You were killed by $damager.\nYou lose $$reduce for getting killed.");
+						$this->api->reduceMoney($player, $reduce);
 					}
 				}
 			}
