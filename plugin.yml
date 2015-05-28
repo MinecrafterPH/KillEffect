@@ -1,5 +1,5 @@
 name: KillEffect
-main: MCPH\KillRewards\Main
+main: MCPH\KillEffect\Main
 version: 1.0
 api: 1.4.0
 load: STARTUP
