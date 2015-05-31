@@ -1,7 +1,7 @@
 <?php
 
 
-namespace MCPH\KillEffect\;
+namespace MCPH\KillEffect;
 
 
 use pocketmine\utils\TextFormat as MT;
