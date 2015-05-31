@@ -4,7 +4,7 @@
 #Amplifier: Power of the effect
 #Particles: Show particles of the effect (true / false)
 
-Duration: "2400"
+Duration: "1200"
 Amplifier: "0"
 Particles: true
 Add-Money: 50
