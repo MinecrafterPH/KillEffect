@@ -1,7 +1,7 @@
 <?php
 
 
-namespace MCPH\KillEffect\Main;
+namespace MCPH\KillEffect\;
 
 
 use pocketmine\utils\TextFormat as MT;
@@ -21,7 +21,7 @@ use onebone\economyapi\EconomyAPI;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDamageEvent;
 
-	class KillEffect extends PluginBase implements Listener
+	class Main extends PluginBase implements Listener
 	
 	{
 		public function onEnable()
@@ -33,7 +33,8 @@ use pocketmine\event\entity\EntityDamageEvent;
 			$this->api = EconomyAPI::getInstance();
 			if (!$this->api) {
 			$this->getLogger()->info(TextFormat::RED."Unable to find EconomyAPI.");
-			return;
+			return true;
+			}
 		}
 	
 		public function onPlayerDeathEvent(PlayerDeathEvent $event)
