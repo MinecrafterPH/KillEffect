@@ -47,10 +47,10 @@ use pocketmine\event\entity\EntityDamageEvent;
 			$give = $cfg->get("Add-Money")
 			$take = $cfg->get("Reduce-Money")
 			
-			$effect = Effect::getEffect("21"); //Effect ID
-	                $effect->setVisible($particles); //Particles
+			$effect = Effect::getEffect("21");
+	                $effect->setVisible($particles);
 	                $effect->setAmplifier($amplifier);
-	                $effect->setDuration($duration); //Ticks
+	                $effect->setDuration($duration);
 			
 			$player = $event->getEntity();
 			$name = strtolower($player->getName());
@@ -65,7 +65,7 @@ use pocketmine\event\entity\EntityDamageEvent;
 					
 					if($damager instanceof Player)
 					{
-						$damager->sendMessage("You killed ".$player.".\nYou earn $".$give." for getting a kill and a health boost for $duration seconds.");
+						$damager->sendMessage("You killed ".$player.".\nYou earn $".$give." for getting a kill and a health boost!");
 						$damager->addEffect($effect);
 						$this->api->giveMoney($damager, $give);
 						
