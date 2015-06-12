@@ -79,6 +79,6 @@ use pocketmine\event\entity\EntityDamageEvent;
 		
 		public function onDisable()
 		{
-			$this->getLogger()->info("Plugin unloaded!");
+			$this->getLogger()->info("KillEffect has been unloaded!");
 		}
 	}
