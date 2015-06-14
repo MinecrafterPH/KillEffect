@@ -1,3 +1,4 @@
+---
 # KillEffect by MinecrafterPH
 
 #Duration in ticks: 1200 = 1 Minute | 20 = 1 second
@@ -9,3 +10,4 @@ Amplifier: "0"
 Particles: true
 Add-Money: 50
 Reduce-Money: 20
+...
