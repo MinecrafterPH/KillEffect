@@ -4,7 +4,7 @@
 namespace MCPH\KillEffect;
 
 
-use pocketmine\utils\TextFormat as MT;
+use pocketmine\utils\TextFormat;
 use pocketmine\command\CommandSender;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
