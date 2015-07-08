@@ -45,7 +45,7 @@ use pocketmine\event\entity\EntityDamageEvent;
 			$give = $cfg->get("Add-Money");
 			$take = $cfg->get("Reduce-Money");
 			
-			$effect = Effect::getEffect("21");
+			$effect = Effect::getEffect(21);
 	                $effect->setVisible($particles);
 	                $effect->setAmplifier($amplifier);
 	                $effect->setDuration($duration);
