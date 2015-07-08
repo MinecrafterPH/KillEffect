@@ -1,8 +1,6 @@
 <?php
 
-
 namespace MCPH\KillEffect;
-
 
 use pocketmine\utils\TextFormat;
 use pocketmine\command\CommandSender;
@@ -79,6 +77,6 @@ use pocketmine\event\entity\EntityDamageEvent;
 		
 		public function onDisable()
 		{
-			$this->getLogger()->info("KillEffect has been unloaded!");
+			$this->getLogger()->info("KillEffect has been disabled!");
 		}
 	}
