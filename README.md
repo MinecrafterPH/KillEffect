@@ -6,3 +6,7 @@
 ![License](https://img.shields.io/badge/license-MIT-red.svg)
 [![Stars](https://img.shields.io/github/stars/MinecrafterPH/KillEffect.svg)](https://github.com/MinecrafterPH/KillEffect/stargazers)
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/MinecrafterPH/killeffect/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
