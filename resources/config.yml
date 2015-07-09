@@ -1,10 +1,11 @@
 ---
 # KillEffect by MinecrafterPH
 
-#Duration in ticks: 1200 = 1 Minute | 20 = 1 second
-#Amplifier: Power of the effect
-#Particles: Show particles of the effect (true / false)
+# Duration in ticks: 1200 = 1 Minute | 20 = 1 second
+# Amplifier: Power of the effect
+# Particles: Show particles of the effect (true/false)
 
+Effect-ID: 21
 Duration: "1200"
 Amplifier: "0"
 Particles: true
