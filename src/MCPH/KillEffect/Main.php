@@ -2,26 +2,22 @@
 
 namespace MCPH\KillEffect;
 
-use pocketmine\utils\TextFormat;
-use pocketmine\command\CommandSender;
+use pocketmine\entity\Effect;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
-use pocketmine\Player;
-use pocketmine\server;
-use pocketmine\level;
-use pocketmine\item\Item;
+use pocketmine\utils\TextFormat;
 use pocketmine\event\Listener;
-use pocketmine\command\Command;
-use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\player\PlayerDeathEvent;
-use pocketmine\math\Vector3;
-use onebone\economyapi\EconomyAPI;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDamageEvent;
+use onebone\economyapi\EconomyAPI;
+
 
 	class Main extends PluginBase implements Listener
 	
 	{
+		private $api;
+		
 		public function onEnable()
 		{
 		        $this->saveDefaultConfig();
