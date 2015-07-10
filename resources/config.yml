@@ -6,8 +6,8 @@
 # Particles: Show particles of the effect (true/false)
 
 Effect-ID: 21
-Duration: "1200"
-Amplifier: "0"
+Duration: 1200
+Amplifier: 0
 Particles: true
 Add-Money: 50
 Reduce-Money: 20
