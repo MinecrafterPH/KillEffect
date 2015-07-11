@@ -1,7 +1,7 @@
 name: KillEffect
 main: MCPH\KillEffect\Main
 version: 1.0
-api: 1.4.0
+api: 1.12.0
 load: STARTUP
 author: MinecrafterPH
 description: Get effects when killing someone.
