@@ -2,6 +2,7 @@
 
 namespace MCPH\KillEffect;
 
+use pocketmine\Player;
 use pocketmine\entity\Effect;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
