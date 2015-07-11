@@ -16,7 +16,6 @@ use onebone\economyapi\EconomyAPI;
 	class Main extends PluginBase implements Listener
 	
 	{
-		private $api;
 		
 		public function onEnable()
 		{
