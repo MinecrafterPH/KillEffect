@@ -39,7 +39,6 @@ use onebone\economyapi\EconomyAPI;
 			$amplifier = $cfg->get("Amplifier");
 			
 			$give = $cfg->get("Add-Money");
-			$take = $cfg->get("Reduce-Money");
 			
 			$id = $cfg->get("Effect-ID");
 			
@@ -63,10 +62,9 @@ use onebone\economyapi\EconomyAPI;
 					{
 						$damager->sendMessage("You killed ".$player.".\nYou earn $".$give." for getting a kill and an effect!");
 						$damager->addEffect($effect);
-						$this->api->giveMoney($damager, $give);
+						$this->api->addMoney($damager, $give);
 						
-						$player->sendMessage("You were killed by ".$damager.".\nYou lose $".$take." for getting killed.");
-						$this->api->takeMoney($player, $take);
+						$player->sendMessage("You were killed by ".$damager);
 					}
 				}
 			}
