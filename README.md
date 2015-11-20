@@ -5,5 +5,6 @@
 [![Issues](http://img.shields.io/github/issues-raw/MinecrafterPH/KillEffect.svg)](https://github.com/MinecrafterPH/KillEffect/issues)
 ![License](https://img.shields.io/badge/license-MIT-red.svg)
 [![Stars](https://img.shields.io/github/stars/MinecrafterPH/KillEffect.svg)](https://github.com/MinecrafterPH/KillEffect/stargazers)
+###### Dependent on EconomyAPI.
 
 
