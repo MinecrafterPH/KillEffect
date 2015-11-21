@@ -1,6 +1,6 @@
 name: KillEffect
 main: MCPH\KillEffect\Main
-version: 1.1beta.1
+version: 1.1-beta
 api: 1.13.0
 dependent: EconomyAPI
 load: STARTUP
