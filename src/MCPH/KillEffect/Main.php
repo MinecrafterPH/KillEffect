@@ -24,8 +24,8 @@ use onebone\economyapi\EconomyAPI;
 		        $this->reloadConfig();	
 			$this->getServer()->getPluginManager()->registerEvents($this,$this);
 			$this->getLogger()->info("KillEffect has been enabled.");
-			$this->api = EconomyAPI::getInstance();
-			if (!$this->api) {
+			$this->money = EconomyAPI::getInstance();
+			if (!$this->money) {
 			$this->getLogger()->info(TextFormat::RED."Unable to find EconomyAPI.");
 			return true;
 			}
@@ -39,6 +39,7 @@ use onebone\economyapi\EconomyAPI;
 			$amplifier = $cfg->get("Amplifier");
 			
 			$give = $cfg->get("Add-Money");
+			$lose = $cfg->get("Lost-Money");
 			
 			$id = $cfg->get("Effect-ID");
 			
@@ -62,9 +63,10 @@ use onebone\economyapi\EconomyAPI;
 					{
 						$damager->sendMessage("You killed ".$player.".\nYou earn $".$give." for getting a kill and an effect!");
 						$damager->addEffect($effect);
-						$this->api->addMoney($damager, $give);
+						$this->money->addMoney($damager, $give);
 						
 						$player->sendMessage("You were killed by ".$damager);
+						$this->money->reduceMoney($player, $lose);
 					}
 				}
 			}
