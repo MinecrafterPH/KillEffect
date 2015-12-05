@@ -23,7 +23,8 @@ use onebone\economyapi\EconomyAPI;
 		        $this->saveDefaultConfig();
 		        $this->reloadConfig();	
 			$this->getServer()->getPluginManager()->registerEvents($this,$this);
-			$this->getLogger()->info("KillEffect has been enabled.");
+			$this->getLogger()->info(TextFormat::YELLOW . "[" . TextFormat::GOLD . "KillEffect" . TextFormat::YELLOW. "] " . TextFormat::GREEN . "Plugin has been enabled!");
+			$this->getLogger()->info(TextFormat::YELLOW . "[" . TextFormat::GOLD . "KillEffect" . TextFormat::YELLOW. "] " . TextFormat::GREEN . "Created by " . TextFormat::WHITE . "MinecrafterPH");
 			$this->money = EconomyAPI::getInstance();
 			if (!$this->money) {
 			$this->getLogger()->info(TextFormat::RED."Unable to find EconomyAPI.");
